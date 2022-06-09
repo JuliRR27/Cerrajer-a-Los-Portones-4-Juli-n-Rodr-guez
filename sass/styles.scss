@@ -1,7 +1,9 @@
-//Variables
-$color-principal: #d43535;
-$color-background: #f2f2f2; 
-$text-align: center;
+@import 'colores';
+@import 'breakpoints';
+@import 'fonts';
+@import 'mixins';
+@import 'variables';
+
 
 * {
   margin: 0;
@@ -11,24 +13,13 @@ $text-align: center;
   box-sizing: border-box; }
 
   body {
-    font-family: 'Open Sans', sans-serif;
+    font-family: $font-family;
     background-image: linear-gradient(45deg, transparent 20%, black 25%, transparent 25%), linear-gradient(-45deg, transparent 20%, black 25%, transparent 25%), linear-gradient(-45deg, transparent 75%, black 80%, transparent 0), radial-gradient(gray 2px, transparent 0);
     background-size: 30px 30px, 30px 30px; }
 
-//Anidacion 
-.row {
-  h3{
-  color: $color-principal;
-  background: $color-background;
-  text-align: $text-align;
-  font-weight: 400;
-  padding: 50px 0;
-  font-size: 40px;
-  }
-  
-  p{
-color: black;
-font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
-}
-  
+    .contenedor {
+      padding: 60px 0;
+      width: 90%;
+      max-width: 1000px;
+      margin: auto;
+      overflow: hidden; }
