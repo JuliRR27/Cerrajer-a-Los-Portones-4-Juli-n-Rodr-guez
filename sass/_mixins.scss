@@ -1,0 +1,39 @@
+@mixin encabezado {
+    color: $color-principal;
+    background: $color-background;
+    text-align: $text-align;
+    font-weight: 400;
+    padding: $padding2;
+    font-size: $font-size;
+
+}
+
+h1 {
+    color: $color-secundary;
+    text-align: $text-align;
+    font-weight: 400;
+    padding: $padding1;
+    font-size: $font-size; }
+
+h2 {
+    @include encabezado;
+}
+
+h3 {
+    @include encabezado;
+}
+
+h4 {
+    @include encabezado;
+}
+
+h5 {
+    @include encabezado;
+}
+
+h6 {
+    font-weight: 400;
+    padding: $padding1;
+    font-size: $font-size;
+    background: $color-secundary; }
+

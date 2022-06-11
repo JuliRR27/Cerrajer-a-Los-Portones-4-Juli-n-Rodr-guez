@@ -2,7 +2,6 @@
 @import 'breakpoints';
 @import 'fonts';
 @import 'mixins';
-@import 'variables';
 
 
 * {
@@ -10,16 +9,210 @@
   padding: 0;
   text-decoration: none;
   list-style: none;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+}
 
-  body {
-    font-family: $font-family;
-    background-image: linear-gradient(45deg, transparent 20%, black 25%, transparent 25%), linear-gradient(-45deg, transparent 20%, black 25%, transparent 25%), linear-gradient(-45deg, transparent 75%, black 80%, transparent 0), radial-gradient(gray 2px, transparent 0);
-    background-size: 30px 30px, 30px 30px; }
+.body {
+  font-family: $font-family;
+  background-image: linear-gradient(45deg, transparent 20%, black 25%, transparent 25%), linear-gradient(-45deg, transparent 20%, black 25%, transparent 25%), linear-gradient(-45deg, transparent 75%, black 80%, transparent 0), radial-gradient(gray 2px, transparent 0);
+  background-size: 30px 30px, 30px 30px;
+}
 
-    .contenedor {
-      padding: 60px 0;
-      width: 90%;
-      max-width: 1000px;
-      margin: auto;
-      overflow: hidden; }
+.contenedor {
+  padding: $padding3;
+  width: $width2;
+  max-width: $max-width;
+  margin: auto;
+  overflow: hidden;
+}
+
+.titulo {
+  color: $color-principal;
+  background: $color-background;
+  font-size: 50px;
+  text-align: $text-align;
+  padding: $padding2;
+  margin-bottom: 60px;
+}
+
+
+.footer {
+  text-align: $text-align;
+  color: $color-principal;
+}
+
+.mapa {
+  margin-top: 25px;
+  margin-bottom: 100px;
+  border: $border2;
+}
+
+/* Header */
+.header {
+  width: $width;
+  height: 600px;
+  background: #FF416C;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, rgba(255, 73, 41, 0.651), rgba(255, 66, 110, 0.651)), url(../img/Logo.jpg);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, rgba(255, 73, 41, 0.651), rgba(255, 66, 110, 0.651)), url(../img/Logo.jpg);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background-attachment: fixed;
+  position: relative;
+}
+
+.nav {
+  text-align: right;
+  padding: 30px 50px 0 0;
+}
+
+.nav ul li {
+  display: inline-block;
+  line-height: 80px;
+  margin: 0 5px;
+}
+
+.nav ul li a {
+  color: $color-secundary;
+  font-size: 17px;
+}
+
+.nav>a {
+  color: $color-secundary;
+  font-weight: 300;
+  text-decoration: none;
+  margin-right: 10px;
+}
+
+.nav>a:hover {
+  text-decoration: underline;
+}
+
+.wave {
+  position: absolute;
+  bottom: 0;
+  width: $width;
+}
+
+.table {
+  background: $color-secundary;
+  margin-top: 50px;
+  caption-side: bottom;
+  margin-left: auto;
+  margin-right: auto;
+  border-collapse: collapse;
+}
+
+.th {
+  color: #000000;
+}
+
+.caption {
+  padding-top: 20px;
+  font-style: italic;
+  background: white;
+  border: $border1;
+}
+
+.td,
+th {
+  border: $border2;
+  padding-left: $padding-left;
+  padding-right: $padding-right;
+  padding-top: $padding-top;
+  padding-bottom: $padding-bottom;
+}
+
+.header .textos-header {
+  display: flex;
+  height: 430px;
+  width: $width;
+  align-items: center;
+  justify-content: center;
+  text-align: $text-align;
+}
+
+.textos-header h1 {
+  font-size: 50px;
+  color: $color-secundary;
+}
+
+.textos-header h2 {
+  font-size: 30px;
+  font-weight: 300;
+  color: $color-secundary;
+}
+
+/* About us */
+.contenedor-sobre-nosotros {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  align-content: space-between;
+  background: $color-secundary;
+  width: $width2;
+  margin: 1.6em auto;
+  gap: 1.6em;
+  border: $border2; }
+
+.imagen-about-us {
+  width: 48%; }
+
+.sobre-nosotros .contenedor-textos {
+  width: 48%; }
+
+.contenedor-textos h3 {
+  margin-bottom: 15px; }
+
+.row h3 {
+  color: #CB4335;
+  display: inline-block;
+  text-align: c$text-align;
+  width: 250px;
+  height: 100px;
+  padding: 5px;
+  box-shadow: $box-shadow;
+  margin-right: 5px; }
+
+.contenido-textos p {
+  padding: 0px 0px 30px 15px;
+  font-weight: 300;
+  text-align: justify;
+  background: $color-secundary; }
+
+.fotos {
+  padding: 0px 0px 30px 15px;
+  text-align: $text-align; }
+
+.fotografias {
+  padding: 0px 0px 0px 500px;
+  text-align: $text-align; }
+
+  /* Galeria */
+.galeria {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  width: $width2;
+  margin: auto;
+  grid-gap: 10px;
+  padding: $padding2;
+  overflow: hidden; }
+
+.galeria > a {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  box-shadow: $box-shadow; }
+
+.galeria img {
+  width: $width;
+  vertical-align: top;
+  height: 300px;
+  object-fit: cover;
+  transition: transform 0.5s; }
+
+.galeria a:hover img {
+  filter: blur(2px);
+  transform: rotate(10deg) scale(1.3); }
